@@ -90,3 +90,14 @@
 
 -- select city, state, count(*) as "Count" from address_book group by city,state LIMIT 0, 1000	2 row(s) returned	0.000 sec / 0.000 sec
 
+-- UC8: Ability to retrieve entries sorted alphabetically by Person’s name for a given city
+
+    select * from address_book
+    order by first_name,last_name;
+
+    first_name  last_name   address             city    state       zip     phone_number   email
+
+    Rushikesh	Shinde	    12/A Kabir Park	    Mumbai	Maharashtra	401020	8432648871	   rushikesh.shinde@gmail.com
+    Sanjeev	    Thakur	    21/A Koliwada CHS	Panvel	Maharashtra	410210	7882145324	   sanjeev.thakur@gmail.com
+
+-- select * from address_book order by first_name,last_name LIMIT 0, 1000	2 row(s) returned	0.000 sec / 0.000 sec
