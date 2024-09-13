@@ -95,10 +95,10 @@
     select * from address_book
     order by first_name,last_name;
 
-    first_name  last_name   address             city    state       zip     phone_number   email
+    first_name  last_name   address             city    state       	zip     phone_number   	email
 
-    Rushikesh	Shinde	    12/A Kabir Park	    Mumbai	Maharashtra	401020	8432648871	   rushikesh.shinde@gmail.com
-    Sanjeev	    Thakur	    21/A Koliwada CHS	Panvel	Maharashtra	410210	7882145324	   sanjeev.thakur@gmail.com
+    Rushikesh	Shinde	    12/A Kabir Park	Mumbai	Maharashtra	401020	8432648871	rushikesh.shinde@gmail.com
+    Sanjeev	Thakur	    21/A Koliwada CHS	Panvel	Maharashtra	410210	7882145324	sanjeev.thakur@gmail.com
 
 -- select * from address_book order by first_name,last_name LIMIT 0, 1000	2 row(s) returned	0.000 sec / 0.000 sec
 
@@ -136,12 +136,28 @@
 
     select * from address_book;
 
-    first_name  last_name   address             city    state       zip     phone_number    email                       name                type
+    first_name  last_name   address             city    state       	zip     phone_number	    email                       name               	type
 
-    Rushikesh	Shinde	    12/A Kabir Park	    Mumbai	Maharashtra	401020	8432648871	    rushikesh.shinde@gmail.com	Rushikesh Shinde	Family
-    Sanjeev	    Thakur	    21/A Koliwada CHS	Panvel	Maharashtra	410210	7882145324	    sanjeev.thakur@gmail.com	Sanjeev Thakur	    Profession
-    Jenil	    Modi	    551, Central Park	Nashik	Maharashtra	310344	9023567832	    jenil.modi@gmail.com	    Jenil Modi	        Profession
-    Devarshi	Pandey	    201/B Kshatriya CHS	NCR	    Delhi	    212473	8787743211	    devarshi.pandey@gmail.com	Devarshi Pandey	    Friends
-    Charan	    Kanchan	    33/A Maitri Park	Mumbai	Maharashtra	400084	89877564231	    ckanchan@gmail.com	        Charan Kanchan	    Family
+    Rushikesh	Shinde	    12/A Kabir Park	Mumbai	Maharashtra	401020	8432648871	    rushikesh.shinde@gmail.com	Rushikesh Shinde	Family
+    Sanjeev	Thakur	    21/A Koliwada CHS	Panvel	Maharashtra	410210	7882145324	    sanjeev.thakur@gmail.com	Sanjeev Thakur	    	Profession
+    Jenil	Modi	    551, Central Park	Nashik	Maharashtra	310344	9023567832	    jenil.modi@gmail.com	Jenil Modi	        Profession
+    Devarshi	Pandey	    201/B Kshatriya CHS	NCR	Delhi	    	212473	8787743211	    devarshi.pandey@gmail.com	Devarshi Pandey	    	Friends
+    Charan	Kanchan	    33/A Maitri Park	Mumbai	Maharashtra	400084	89877564231	    ckanchan@gmail.com	        Charan Kanchan	    	Family
 
 -- select * from address_book LIMIT 0, 1000	5 row(s) returned	0.000 sec / 0.000 sec
+
+-- UC10: Ability to get number of contact persons
+
+    select type, count(*) "Count"
+    from address_book
+    group by type;
+
+    select * from address_book;
+
+    type        Count
+
+    Family	2
+    Profession	2
+    Friends	1
+
+-- select type, count(*) "Count" from address_book group by type LIMIT 0, 1000	3 row(s) returned	0.000 sec / 0.000 sec
