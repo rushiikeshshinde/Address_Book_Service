@@ -1,1 +1,23 @@
 -- Welcome to Address Book Service
+
+-- UC1: Ability to create a Address Book Service DB
+    create database address_book_db;`
+
+-- create database address_book_db	1 row(s) affected	0.016 sec
+
+-- Shows the created databases
+    show databases;
+
+    Databases:-
+
+    address_book_db
+    information_schema
+    mydb
+    mysql
+    payroll_service
+    performance_schema
+    sakila
+    sys
+    world
+
+-- show databases	9 row(s) returned	0.000 sec / 0.000 sec
