@@ -161,3 +161,24 @@
     Friends	1
 
 -- select type, count(*) "Count" from address_book group by type LIMIT 0, 1000	3 row(s) returned	0.000 sec / 0.000 sec
+
+-- UC11: Ability to add person to both Friend and Family
+
+    insert into address_book(first_name, last_name, address, city, state, zip, phone_number, email, name, type)
+    values("Rushikesh", "Shinde", "41/C Avenue Park", "Mumbai", "Maharashtra", "400084", "8432648871","code.demn@gmail.com", "Rushikesh Shinde", "Friends");
+
+-- insert into address_book(first_name, last_name, address, city, state, zip, phone_number, email, name, type) values("Rushikesh", "Shinde", "41/C Avenue Park", "Mumbai", "Maharashtra", "400084", "8432648871","code.demn@gmail.com", "Rushikesh Shinde", "Friends")	1 row(s) affected	0.016 sec
+
+    select * from address_book;
+
+    first_name  last_name   address             city    state       	zip     phone_number	    email                       name               	type
+
+    Rushikesh	Shinde	    12/A Kabir Park	Mumbai	Maharashtra	401020	8432648871	    rushikesh.shinde@gmail.com	Rushikesh Shinde	Family
+    Sanjeev	Thakur	    21/A Koliwada CHS	Panvel	Maharashtra	410210	7882145324	    sanjeev.thakur@gmail.com	Sanjeev Thakur	    	Profession
+    Jenil	Modi	    551, Central Park	Nashik	Maharashtra	310344	9023567832	    jenil.modi@gmail.com	Jenil Modi	        Profession
+    Devarshi	Pandey	    201/B Kshatriya CHS	NCR	Delhi	    	212473	8787743211	    devarshi.pandey@gmail.com	Devarshi Pandey	    	Friends
+    Charan	Kanchan	    33/A Maitri Park	Mumbai	Maharashtra	400084	89877564231	    ckanchan@gmail.com	        Charan Kanchan	    	Family
+    Rushikesh	Shinde	    41/C Avenue Park	Mumbai	Maharashtra	400084	8432648871	    code.demn@gmail.com	        Rushikesh Shinde	Friends
+
+
+-- select * from address_book LIMIT 0, 1000	6 row(s) returned	0.000 sec / 0.000 sec
