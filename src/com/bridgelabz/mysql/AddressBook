@@ -54,3 +54,13 @@
 
 -- insert into address_book values("Rushikesh", "Shinde", "41/C Avenue Park", "Mumbai", "Maharashtra", "400084", "8432648871","code.demn@gmail.com"), ("Sanjeev", "Thakur", "21/A Koliwada CHS", "Panvel", "Maharashtra", "410210", "7882145324", "sanjeev.thakur@gmail.com"),("Akshita", "Bhute", "33/A Maitri Park", "Mumbai", "Maharashtra", "400084", "89877564231", "abhute@gmail.com")	3 row(s) affected Records: 3  Duplicates: 0  Warnings: 0	0.015 sec
 
+-- UC4: Ability to edit existing contact person using their name
+
+-- Updating user data using first_name and last_name
+
+    update address_book
+    set address = "12/A Kabir Park", zip = "401020", email = "rushikesh.shinde@gmail.com"
+    where first_name = "Rushikesh" and last_name = "Shinde";
+
+--update address_book set address = "12/A Kabir Park", zip = "401020", email = "rushikesh.shinde@gmail.com" where first_name = "Rushikesh" and last_name = "Shinde"	1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0	0.094 sec
+
