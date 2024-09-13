@@ -76,3 +76,17 @@
     where city = "Panvel";
 
 -- select * from address_book where city = "Panvel" LIMIT 0, 1000	1 row(s) returned	0.000 sec / 0.000 sec
+
+-- UC7: Ability to understand the size of address book by City and State
+
+    select city, state, count(*) as "Count"
+    from address_book
+    group by city,state;
+
+    city    state       count
+
+    Mumbai	Maharashtra	1
+    Panvel	Maharashtra	1
+
+-- select city, state, count(*) as "Count" from address_book group by city,state LIMIT 0, 1000	2 row(s) returned	0.000 sec / 0.000 sec
+
