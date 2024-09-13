@@ -62,5 +62,11 @@
     set address = "12/A Kabir Park", zip = "401020", email = "rushikesh.shinde@gmail.com"
     where first_name = "Rushikesh" and last_name = "Shinde";
 
---update address_book set address = "12/A Kabir Park", zip = "401020", email = "rushikesh.shinde@gmail.com" where first_name = "Rushikesh" and last_name = "Shinde"	1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0	0.094 sec
+-- update address_book set address = "12/A Kabir Park", zip = "401020", email = "rushikesh.shinde@gmail.com" where first_name = "Rushikesh" and last_name = "Shinde"	1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0	0.094 sec
+
+-- UC5: Ability to delete a person using person's name
+    delete from address_book
+    where first_name = "Akshita";
+
+-- delete from address_book where first_name = "Akshita";	1 row(s) affected	0.000 sec
 
